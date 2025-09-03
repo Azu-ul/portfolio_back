@@ -9,6 +9,7 @@ const pool = new pg.Pool({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
+  client_encoding: 'UTF8',
   ssl: {
     rejectUnauthorized: false // 👈 necesario en Render Free
   }
