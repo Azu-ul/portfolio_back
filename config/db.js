@@ -9,6 +9,9 @@ const pool = new pg.Pool({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
+  ssl: {
+    rejectUnauthorized: false // 👈 necesario en Render Free
+  }
 });
 
 // Test connection con mejor manejo de errores
